@@ -11,13 +11,13 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 
 
 interface JSONPlaceHolderApi {
-    @GET("/items/{id}")
-    fun getPostWithID(@Path("id") id: Int): Observable<Post>
+    @GET("/posts/{id}")
+    fun getPost(@Path("id") id: Int): Observable<Post>
 
-    @GET("/items")
+    @GET("/posts")
     fun getAllPosts(): Observable<List<Post>>
 
-    @GET("/items/{id}/comments")
+    @GET("/posts/{id}/comments")
     fun getComments(@Path("id") id: Int): Observable<List<Comment>>
 }
 

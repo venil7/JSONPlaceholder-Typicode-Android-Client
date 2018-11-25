@@ -1,5 +1,6 @@
 package com.example.darkruby.musicorganizer.di
 
+import android.content.Context
 import com.example.darkruby.musicorganizer.models.PostDetailsViewModel
 import com.example.darkruby.musicorganizer.services.NetworkService
 import com.example.darkruby.musicorganizer.services.SchedulerProvider
@@ -10,7 +11,7 @@ import dagger.Provides
 class PostDetailsActivityModule {
 
     @Provides
-    fun provideViewModel(schedulerProvider: SchedulerProvider, networkService: NetworkService) =
-            PostDetailsViewModel(schedulerProvider, networkService)
+    fun provideViewModel(context: Context, schedulerProvider: SchedulerProvider, networkService: NetworkService) =
+            PostDetailsViewModel(context, schedulerProvider, networkService)
 
 }

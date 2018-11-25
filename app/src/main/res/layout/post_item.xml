@@ -14,7 +14,8 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/postItemConstraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> model.onClick()}">
 
         <TextView
             android:id="@+id/textPostItemTitle"

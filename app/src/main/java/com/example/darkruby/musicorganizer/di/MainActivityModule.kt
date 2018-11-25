@@ -1,7 +1,6 @@
 package com.example.darkruby.musicorganizer.di
 
 import android.content.Context
-import com.example.darkruby.musicorganizer.AndroidApp
 import com.example.darkruby.musicorganizer.models.MainActivityViewModel
 import com.example.darkruby.musicorganizer.services.NetworkService
 import com.example.darkruby.musicorganizer.services.SchedulerProvider

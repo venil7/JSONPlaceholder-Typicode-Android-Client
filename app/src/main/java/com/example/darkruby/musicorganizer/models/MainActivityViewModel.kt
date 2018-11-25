@@ -15,7 +15,7 @@ data class MainActivityViewModel(
     val adapter: ObservableField<PostAdapter> = ObservableField(PostAdapter(context, listOf()))
     val sched by lazy { schedulerProvider.getSchedulersForObservable<List<Post>>() }
 
-    init {
+    fun getPosts() {
         val allPostsObs = networkService.getJSONApi().getAllPosts()
         sched(allPostsObs).subscribe { adapter.set(PostAdapter(context, it)) }
     }

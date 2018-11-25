@@ -23,8 +23,9 @@ class MainActivity : DaggerActivity() {
         binding.setVariable(BR.model, model)
         binding.executePendingBindings()
 
-        val mRecyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        mRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+
+        model.getPosts()
     }
 
     override fun onDestroy() {
